@@ -1,0 +1,15 @@
+@mixin btn($bg) {
+  background: $bg;
+  color:white;
+	 text-decoration:none;
+	 padding: 10px 15px;
+	 border: 0;
+	 border-radius:4px;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}

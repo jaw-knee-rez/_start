@@ -2,29 +2,25 @@
 $MQs: true;
 
 //COLORS
-$uph: #ff5c36;
-$luph: #ff7859;
-$duph: #ee5734;
+$c: #ff5c36;
+$lc: #ff7859;
+$dc: #ee5734;
 
 // SASS
 @import 'jkr/jkr';
 
 //FONTS
 @mixin display {
-	font-family: 'Quicksand', sans-serif;
+	font-family: sans-serif;
 	font-weight: 300;
 }
 @mixin paragraph {
-	font-family: 'Quicksand', sans-serif;
+	font-family: sans-serif;
 	font-weight: 400;
 }
 
 html { font-size: 62.5%; }
 body { background: #272727 url('../images/bg.png') no-repeat center top; color: #272727; @include paragraph; font-size: 14px; font-size: 1.4rem; -webkit-backface-visibility: hidden; }
-
-// Mobile Help
-//.phone { display: none !important; @include media($mobile) { display: block !important; } }
-//.desktop { display: block !important; @include media($mobile) { display: none !important; } }
 
 // Type
 h1, h2, h3, h4 { @include display; margin: 0; color: #5b5b5b; }
@@ -35,7 +31,7 @@ h3, h3 a { @include font-size(18); text-decoration: none; }
 
 p { color: #272727; line-height: 1.6em; margin: 5px 0; }
 
-a { color: $uph;
+a { color: $c;
 	&:hover { text-decoration: none; }
 	&:focus { outline: 0; }
 }
@@ -53,62 +49,22 @@ img { width:100%; }
 // Forms 
 .form { 
 	.field-group { width: 100%; margin: 0 0 10px; clear: left;
-		label { display: block; @include font-size(10); color: $uph; padding: 10px 0 5px; opacity: 0; z-index: 999; text-transform: uppercase; font-weight: 700; }
+		label { display: block; @include font-size(10); color: $c; padding: 10px 0 5px; opacity: 0; z-index: 999; text-transform: uppercase; font-weight: 700; }
 		.up { opacity: 1; }
-		input { width: 100%; @include font-size(18); padding: 10px; background: white; border: 1px solid $uph; border-radius: 5px; outline: 0; z-index: 998; }
+		input { width: 100%; @include font-size(18); padding: 10px; background: white; border: 1px solid $c; border-radius: 5px; outline: 0; z-index: 998; }
 		.forgot-password { @include font-size(12); }
 	}
 	.check-group {
-		input, p, a { display: inline-block; @include font-size(18); color: $uph; }
+		input, p, a { display: inline-block; @include font-size(18); color: $c; }
 	}
 	.actions { width: 100%; text-align: center; margin: 20px 0; clear: both;
-		input, .ui-btn-text { border: 0; @include font-size(20); background: $uph; padding: 15px 35px; color: white; font-weight: 300; border-radius: 5px; text-align: center; 
-			&:hover { background: $luph; }
-			&:focus { background: $duph; }
+		input, .ui-btn-text { border: 0; @include font-size(20); background: $c; padding: 15px 35px; color: white; font-weight: 300; border-radius: 5px; text-align: center; 
+			&:hover { background: $lc; }
+			&:focus { background: $dc; }
 		}
 		.disabled { background: #ccc !important;  }
 		.ui-btn-hidden { display: none; }
 	}
 }
 
-.btn  { @include btn($uph); outline: 0; }
-
-.hdr { width: 100%; background: #bf3f27 url('../images/event-creator-hdr.png') no-repeat; padding: 20px; 
-	.logo { width: 30px; display: inline-block;
-		img { width: 100%; }
-	}
-	h1 { color: white; @include font-size(16); }
-}
-
-.w { width: 80%; margin: 2% auto; background: white; box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.3); border-radius: 4px;
-	
-	.sb { width: 24%; position: fixed;
-		p { text-align: center; color: #929292; text-transform: uppercase; @include font-size(12); }
-		.select-league { padding: 20px; background: #ededed; }
-		.select-brand { padding: 20px; }
-		.actions { padding: 20px; 
-			.btn { width: 100%; padding: 15px; @include font-size(20); }
-		}
-	}
-	.content { width: 70%; min-height: 400px; float: right; padding: 20px; background: #ededed; 
-		.loading { width: 50px; margin: 100px auto; }
-		.event { background: white; padding: 10px; margin-bottom: 10px; border: 1px solid white; cursor: pointer; border-radius: 4px;
-			span { display: none; }
-			time { @include font-size(24); display: inline-block; padding: 10px; }
-			p { display: inline-block; }
-		}
-		.event-selected { border-color: $uph; }
-	}
-}
-
-footer {
-	.copyright { @include font-size(10); padding: 20px; color: #7a7a7a; text-align: center; }
-	ul { text-align: center;
-				li { display: inline; margin: 5px;
-					span { display: inline-block; padding: 5px 10px; font-weight: 100; text-transform:uppercase; color: #4e4e4e; }
-					a { display: inline-block; padding: 5px 10px; text-decoration: none; border: 1px solid #4e4e4e; color: #4e4e4e; border-radius: 4px; 
-						&:hover { color: $uph; border: 1px solid $uph; }
-					}
-				}
-			}
-}
+.btn  { @include btn($blue); outline: 0; }

@@ -20,7 +20,7 @@ $dc: #ee5734;
 }
 
 html { font-size: 62.5%; }
-body { background: #272727 url('../images/bg.png') no-repeat center top; color: #272727; @include paragraph; font-size: 14px; font-size: 1.4rem; -webkit-backface-visibility: hidden; }
+body { background: #f6f6f6; color: #272727; @include paragraph; font-size: 14px; font-size: 1.4rem; -webkit-backface-visibility: hidden; }
 
 // Type
 h1, h2, h3, h4 { @include display; margin: 0; color: #5b5b5b; }
@@ -67,4 +67,4 @@ img { width:100%; }
 	}
 }
 
-.btn  { @include btn($blue); outline: 0; }
+.btn  { @include btn($c); outline: 0; }
